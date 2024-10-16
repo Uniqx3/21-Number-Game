@@ -27,6 +27,8 @@ def start():#To start the game
                 number = int(input(">>> "))
                 n_list.append(number)#adding the numbers into the list
 
+            
+            rule2(n_list)
             consecutive(n_list,n+1)#To check if the numbers are consecutive
             last_number = n_list[-1]#last number added in the list
             check(last_number)
@@ -82,7 +84,10 @@ def start():#To start the game
         lose()
 
 
-
+def rule2(n_list):
+    if n_list[0] != 1:
+        print("Wrong!!\nYou violated rule 2")
+        lose()
 def won():
     print("\n\nCONGRATULATIONS!!!\nYOU WON\nTHANK YOU FOR PLAYING\nExiting...")
     exit(0)
